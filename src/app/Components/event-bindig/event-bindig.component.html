@@ -1,0 +1,17 @@
+<p>event-bindig works!</p>
+
+
+<hr>
+<h1>Pass Primter Data Type</h1>
+<button class="btn btn-outline-info" (click)="printmessage('btn1')" >Click</button>
+<hr>
+<h1>Pass event arguments</h1>
+<button class="btn btn-outline-info" (click)="printmessage2($event)" >Click Me</button>
+<hr>
+<h1>Pass Refernce to Elemnet in Angular</h1>
+<p #myP>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, iste est voluptates magnam quaerat placeat minima deleniti molestiae laudantium quam quis at, quasi quas, eaque perferendis sint unde? Repudiandae, fuga.</p>
+<button class="btn btn-outline-info" (click)="printmessage3(myP)" >Click</button>
+<hr>
+<div #DivEl>
+  <p>Test Native Element</p>
+</div>

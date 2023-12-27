@@ -1,0 +1,52 @@
+<h2>structure-directive works!</h2>
+<h4 class="text-center">ngIf</h4>
+Show <input type="checkbox" name="Show" [(ngModel)] ="show">
+<div *ngIf="show" class="text-center  bg-primary text-light">
+  <h1>Welcome Nader</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, enim ipsum earum praesentium veritatis odio eum maxime distinctio aliquam ad quia quaerat quas voluptates sapiente dolorem libero cum. Voluptate, accusamus.</p>
+</div>
+<hr>
+
+
+
+<h4 class="text-center">ngIf Else</h4>
+Are You Ready? <input type="checkbox"  [(ngModel)]="Ready">
+<div class="bg-primary" *ngIf="Ready; else DivNo">Yes</div>
+
+<ng-template #DivNo>
+  <div class="bg-danger">No</div>
+</ng-template>
+<hr>
+
+
+
+<h4 class="text-center">ngFor</h4>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-3 bg-dark text-light text-center m-4" *ngFor="let item of Product let i = index">
+      <h1>{{i+1}}-Tittle:{{item}}</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ut quae quia delectus ratione ullam!</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+
+
+
+<h4>ngSwith</h4>
+<div class="container text-center">
+<select name="" id="" [(ngModel)]="Color">
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+</select>
+
+<div [ngSwitch]="Color">
+  <p *ngSwitchCase="'red'" class="bg-danger">Red</p>
+  <p *ngSwitchCase="'green'" class="bg-success">Green</p>
+  <p *ngSwitchCase="'blue'" class="bg-primary">Blue</p>
+  <p *ngSwitchDefault="" class="bg-dark text-light">None</p>
+</div>
+</div>

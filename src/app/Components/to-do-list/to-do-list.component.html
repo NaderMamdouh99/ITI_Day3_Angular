@@ -1,0 +1,15 @@
+<p>to-do-list works!</p>
+
+
+<input type="text" class="form-control" placeholder="Enter Your Task" name="FormName" (input)="store($event)" value="{{inputName}}"> <br>
+<button type="submit" class="btn btn-outline-info" name="Add"  (click)="Print()">Add Task</button>
+<hr>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-4 bg-dark text-light  m-3" *ngFor="let item of ArrayTask let i = index">
+      <h1>NameTask:{{item}}</h1>
+      <input type="button" value="Delete" class="btn btn-outline-danger" (click)="Clear(i)">
+    </div>
+  </div>
+</div>
